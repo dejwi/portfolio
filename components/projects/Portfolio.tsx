@@ -10,7 +10,9 @@ const Portfolio: React.FC = () => {
         {/*header*/}
         <div className="flex flex-col justify-center items-center">
           <h3 className="tracking-[-0.035em] text-[2.5rem]">Portfolio</h3>
-          <span className="-mt-4  text-[#707070] text-xs ">Next.js</span>
+          <span className="-mt-4  text-[#707070] text-xs md:text-sm">
+            Next.js
+          </span>
         </div>
 
         {/*desc*/}
