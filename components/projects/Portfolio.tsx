@@ -47,7 +47,11 @@ const Portfolio: React.FC = () => {
         </p>
         {/*buttons*/}
         <div className="flex justify-center gap-12 text-xs font-light mt-2">
-          <a className="flex items-center">
+          <a
+            className="flex items-center"
+            href="https://github.com/dejwi/portfolio"
+            target="_blank"
+          >
             <div className="w-4 h-4 m-0">
               <Image
                 alt="github"

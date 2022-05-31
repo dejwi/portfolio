@@ -53,7 +53,11 @@ const About: React.FC = () => {
         </p>
 
         <div className="flex justify-center gap-12 text-xs font-light mt-2">
-          <a className="w-6 h-6 m-0">
+          <a
+            className="w-6 h-6 m-0"
+            href="https://github.com/dejwi"
+            target="_blank"
+          >
             <Image
               alt="github"
               src={ghLogo}

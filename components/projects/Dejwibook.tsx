@@ -50,7 +50,11 @@ const Dejwibook: React.FC = () => {
           {/*buttons*/}
           <div className="w-full flex justify-center">
             <div className="flex justify-between w-[10.5rem] text-xs md:text-[0.85rem] md:w-[14rem] mt-4">
-              <a className="flex items-center">
+              <a
+                className="flex items-center"
+                href="https://github.com/dejwi/fb-clone"
+                target="_blank"
+              >
                 <div className="w-4 h-4 m-0">
                   <Image
                     alt="github"
@@ -61,7 +65,13 @@ const Dejwibook: React.FC = () => {
                 </div>
                 Details
               </a>
-              <a>Live</a>
+              <a
+                href="https://dejwibook.vercel.app"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Live
+              </a>
               <a>Tech</a>
             </div>
           </div>
