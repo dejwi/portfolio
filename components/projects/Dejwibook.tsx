@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { leftAnime, rightAnime } from "./animeOpts";
 
 const Dejwibook: React.FC = () => {
-  const [showTech, setShowTech] = useState(true);
+  const [showTech, setShowTech] = useState(false);
   return (
     <article className="flex h-screen w-screen items-center justify-center font-[Rubik] font-light">
       {/*img*/}

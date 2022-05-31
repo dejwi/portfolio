@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import ghLogo from "../../assets/github.svg";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Portfolio: React.FC = () => {
+  const [showTech, setShowTech] = useState(false);
   const animeOpts = {
     initial: {
       y: 30,
@@ -27,7 +28,7 @@ const Portfolio: React.FC = () => {
 
   return (
     <motion.article
-      className="flex flex-col h-[90vh] w-screen items-center justify-center font-[Rubik] font-light"
+      className="flex flex-col h-[90vh] w-screen items-center justify-center font-[Rubik] font-light relative"
       {...animeOpts}
     >
       {/*content*/}
@@ -62,9 +63,27 @@ const Portfolio: React.FC = () => {
             </div>
             Details
           </a>
-          <a>Tech</a>
+          <button className="font-light" onClick={() => setShowTech(!showTech)}>
+            Tech
+          </button>
         </div>
       </div>
+      <AnimatePresence>
+        {showTech && (
+          <motion.div
+            className="absolute shadow p-1 flex flex-col ml-[23rem] mt-[2rem] "
+            initial={{ x: -95, y: 55, opacity: 0, scale: 0.3 }}
+            animate={{ x: 0, y: 0, opacity: 1, scale: 1 }}
+            transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
+            exit={{ x: -95, y: 55, opacity: 0, scale: 0.3 }}
+          >
+            <span>Typescript</span>
+            <span>Next.js</span>
+            <span>Tailwindcss</span>
+            <span>Framer-motion</span>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.article>
   );
 };

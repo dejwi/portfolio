@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import appScreenshot from "../../assets/pixelt.png";
 import ghLogo from "../../assets/github.svg";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { leftAnime, rightAnime } from "./animeOpts";
 
 const PixelTogether: React.FC = () => {
+  const [showTech, setShowTech] = useState(false);
   return (
     <article className="flex h-screen w-screen items-center justify-center font-[Rubik] font-light">
       {/*img*/}
@@ -25,7 +26,7 @@ const PixelTogether: React.FC = () => {
 
         {/*content*/}
         <motion.div
-          className="flex flex-col justify-center h-full"
+          className="flex flex-col justify-center h-full relative"
           {...rightAnime}
         >
           {/*header*/}
@@ -72,9 +73,32 @@ const PixelTogether: React.FC = () => {
               >
                 Live
               </a>
-              <a>Tech</a>
+              <button
+                className="font-light"
+                onClick={() => setShowTech(!showTech)}
+              >
+                Tech
+              </button>
             </div>
           </div>
+          <AnimatePresence>
+            {showTech && (
+              <motion.div
+                className="absolute shadow p-1 flex flex-col -right-[8rem] top-[7rem] "
+                initial={{ x: -95, y: 55, opacity: 0, scale: 0.3 }}
+                animate={{ x: 0, y: 0, opacity: 1, scale: 1 }}
+                transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
+                exit={{ x: -95, y: 55, opacity: 0, scale: 0.3 }}
+              >
+                <span>Typescript</span>
+                <span>React</span>
+                <span>Tailwindcss</span>
+                <span>Framer-motion</span>
+                <span>Socket.io</span>
+                <span>Express</span>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.div>
       </div>
     </article>
