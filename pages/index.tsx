@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import Top from "../components/Top";
 import Dejwibook from "../components/projects/Dejwibook";
+import PixelTogether from "../components/projects/PixelTogether";
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       </Head>
       <Top />
       <Dejwibook />
+      <PixelTogether />
     </div>
   );
 };
