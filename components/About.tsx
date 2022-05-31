@@ -37,10 +37,10 @@ const About: React.FC = () => {
 
         {/*desc*/}
         <p className="w-[18rem]  leading-[18px] tracking-[-0.035em] text-center">
-          I&apos;m a 16 year old developer from Poland with a dedication. I
-          learn fast and can connect facts pretty easily. Always open to try out
-          something new, with every project gained some unique knowledge, and
-          looking to expand it even more.
+          I&apos;m a 16-year-old developer from Poland who wants to start his
+          journey. I learn fast and can connect facts pretty easily. Always open
+          to try out something new, with every project gained some unique
+          knowledge, and looking to expand it even more.
         </p>
         {/*buttons*/}
 
