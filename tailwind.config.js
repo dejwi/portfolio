@@ -9,6 +9,9 @@ module.exports = {
         cool: ["Inspiration", "cursive"],
         poppi: ["Poppins", "sans-serif"],
       },
+      gridTemplateColumns: {
+        art: "min-content min-content",
+      },
     },
   },
   plugins: [],
