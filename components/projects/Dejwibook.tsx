@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import appScreenshot from "../../assets/dejwibook.jpg";
 import ghLogo from "../../assets/github.svg";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { leftAnime, rightAnime } from "./animeOpts";
 
 const Dejwibook: React.FC = () => {
+  const [showTech, setShowTech] = useState(true);
   return (
     <article className="flex h-screen w-screen items-center justify-center font-[Rubik] font-light">
       {/*img*/}
@@ -25,7 +26,7 @@ const Dejwibook: React.FC = () => {
 
         {/*content*/}
         <motion.div
-          className="flex flex-col justify-center h-full"
+          className="flex flex-col justify-center h-full relative"
           {...rightAnime}
         >
           {/*header*/}
@@ -72,9 +73,35 @@ const Dejwibook: React.FC = () => {
               >
                 Live
               </a>
-              <a>Tech</a>
+              <button
+                onClick={() => setShowTech(!showTech)}
+                className="font-light"
+              >
+                Tech
+              </button>
             </div>
           </div>
+          <AnimatePresence>
+            {showTech && (
+              <motion.div
+                className="absolute shadow p-1 flex flex-col -right-[10rem] top-[6rem] "
+                initial={{ x: -105, y: 80, opacity: 0, scale: 0.3 }}
+                animate={{ x: 0, y: 0, opacity: 1, scale: 1 }}
+                transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
+                exit={{ x: -105, y: 80, opacity: 0, scale: 0.3 }}
+              >
+                <span>Typescript</span>
+                <span>React</span>
+                <span>Tailwindcss</span>
+                <span>Framer-motion</span>
+                <span>Socket.io</span>
+                <span>Express</span>
+                <span>Passportjs</span>
+                <span>MongoDB database</span>
+                <span>AWS s3 bucket</span>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.div>
       </div>
     </article>
