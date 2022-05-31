@@ -1,10 +1,35 @@
 import React from "react";
 import Image from "next/image";
 import ghLogo from "../../assets/github.svg";
+import { motion } from "framer-motion";
 
 const Portfolio: React.FC = () => {
+  const animeOpts = {
+    initial: {
+      y: 30,
+      opacity: 0,
+      scale: 0.9,
+    },
+    transition: {
+      type: "spring",
+      bounce: 0.15,
+      duration: 0.4,
+    },
+    whileInView: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+    },
+    viewport: {
+      amount: 0.75,
+    },
+  };
+
   return (
-    <article className="flex flex-col h-screen w-screen items-center justify-center font-[Rubik] font-light">
+    <motion.article
+      className="flex flex-col h-[90vh] w-screen items-center justify-center font-[Rubik] font-light"
+      {...animeOpts}
+    >
       {/*content*/}
       <div className="flex flex-col">
         {/*header*/}
@@ -36,7 +61,7 @@ const Portfolio: React.FC = () => {
           <a>Tech</a>
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 };
 

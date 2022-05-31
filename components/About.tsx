@@ -2,10 +2,34 @@ import React from "react";
 import Image from "next/image";
 import ghLogo from "../assets/github.svg";
 import emailLogo from "../assets/email.svg";
+import { motion } from "framer-motion";
 
 const About: React.FC = () => {
+  const animeOpts = {
+    initial: {
+      y: 30,
+      opacity: 0,
+      scale: 0.9,
+    },
+    transition: {
+      type: "spring",
+      bounce: 0.15,
+      duration: 0.4,
+    },
+    whileInView: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+    },
+    viewport: {
+      amount: 0.75,
+    },
+  };
   return (
-    <article className="flex flex-col h-screen w-screen items-center justify-center font-[Rubik] font-light">
+    <motion.article
+      className="flex flex-col h-[90vh] w-screen items-center justify-center font-[Rubik] font-light"
+      {...animeOpts}
+    >
       {/*content*/}
       <div className="flex flex-col justify-center items-center">
         {/*header*/}
@@ -14,9 +38,9 @@ const About: React.FC = () => {
         {/*desc*/}
         <p className="w-[18rem]  leading-[18px] tracking-[-0.035em] text-center">
           I&apos;m a 16 year old developer from Poland with a dedication. I
-          learn fast and can connect points pretty easily. Always open to try
-          out something new, with every project always gained unique knowledge,
-          and didn&apos;t stop at major roadblocks.
+          learn fast and can connect facts pretty easily. Always open to try out
+          something new, with every project gained some unique knowledge, and
+          looking to expand it even more.
         </p>
         {/*buttons*/}
 
@@ -47,7 +71,7 @@ const About: React.FC = () => {
           </a>
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 };
 
