@@ -33,6 +33,7 @@ const LeftPart: React.FC = () => {
               layout="responsive"
               objectFit="cover"
               className="rounded"
+              priority
             />
           </motion.div>
         ) : (
@@ -43,6 +44,7 @@ const LeftPart: React.FC = () => {
               layout="responsive"
               objectFit="cover"
               className="rounded shadow-md"
+              priority
             />
           </motion.div>
         )}
