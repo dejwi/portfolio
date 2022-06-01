@@ -20,7 +20,7 @@ const Home: NextPage = () => {
           name="keywords"
           content="Portfolio, Dawid, Krasowski, HTML, CSS, Tailwindcss, React, Nextjs, best, pretty, minimalistic, github, developer, web"
         />
-        <meta name="theme-color" content="#f5f5f4" />
+        <meta name="theme-color" content="#f5f5f5" />
         <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preload" as="image" href="/pixt.gif" />
