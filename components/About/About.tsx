@@ -1,28 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Buttons from "./Buttons";
+import { animeOpts } from "./AnimeOpts";
 
 const About: React.FC = () => {
-  const animeOpts = {
-    initial: {
-      y: 30,
-      opacity: 0,
-      scale: 0.9,
-    },
-    transition: {
-      type: "spring",
-      bounce: 0.15,
-      duration: 0.4,
-    },
-    whileInView: {
-      y: 0,
-      opacity: 1,
-      scale: 1,
-    },
-    viewport: {
-      amount: 0.75,
-    },
-  };
   return (
     <motion.article
       className="flex flex-col h-[90vh] w-screen items-center justify-center font-[Rubik] font-light"
