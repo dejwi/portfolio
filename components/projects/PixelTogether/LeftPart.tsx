@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { leftAnime } from "../animeOpts";
 import { LayoutGroup, motion } from "framer-motion";
 import Image from "next/image";
-import preview from "../../../assets/pixt.gif";
+import preview from "../../../public/pixt.gif";
 import appScreenshot from "../../../assets/pixelt.png";
 
 const LeftPart: React.FC = () => {
   const [showPrev, setShowPrev] = useState(false);
+
+  // useEffect(() => {
+  //   const img: any = new Image();
+  //   img.src = preview; // by setting an src, you trigger browser download
+  // }, []);
 
   return (
     <motion.div
@@ -27,13 +32,12 @@ const LeftPart: React.FC = () => {
             transition={{ duration: 0.3 }}
             layoutId="pixel"
           >
-            <Image
-              src={preview}
-              alt="app screenshot"
-              layout="responsive"
-              objectFit="cover"
+            <img
+              src="/pixt.gif"
+              alt="app preview"
               className="rounded"
-              priority
+              width={preview.width}
+              height={preview.height}
             />
           </motion.div>
         ) : (

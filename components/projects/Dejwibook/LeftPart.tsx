@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { leftAnime } from "../animeOpts";
 import { LayoutGroup, motion } from "framer-motion";
 import Image from "next/image";
-import preview from "../../../assets/dejf2.gif";
+import preview from "../../../public/dejf2.gif";
 import appScreenshot from "../../../assets/dejwibook.jpg";
 
 const LeftPart: React.FC = () => {
@@ -28,13 +28,12 @@ const LeftPart: React.FC = () => {
             transition={{ duration: 0.3 }}
             layoutId="dejwi"
           >
-            <Image
-              src={preview}
-              alt="app screenshot"
-              layout="responsive"
-              objectFit="cover"
+            <img
+              src="/dejf2.gif"
+              alt="app preview"
               className="rounded"
-              priority
+              width={preview.width}
+              height={preview.height}
             />
           </motion.div>
         ) : (

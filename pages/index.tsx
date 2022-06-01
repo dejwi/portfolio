@@ -23,6 +23,8 @@ const Home: NextPage = () => {
         <meta name="theme-color" content="#f5f5f4" />
         <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preload" as="image" href="/pixt.gif" />
+        <link rel="preload" as="image" href="/dejf2.gif" />
       </Head>
       <Top />
       <p className="text-center font-poppi text-[#ADADAD] text-sm">
