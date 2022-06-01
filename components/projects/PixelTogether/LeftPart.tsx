@@ -8,11 +8,6 @@ import appScreenshot from "../../../assets/pixelt.png";
 const LeftPart: React.FC = () => {
   const [showPrev, setShowPrev] = useState(false);
 
-  // useEffect(() => {
-  //   const img: any = new Image();
-  //   img.src = preview; // by setting an src, you trigger browser download
-  // }, []);
-
   return (
     <motion.div
       className="w-[8.5rem] md:w-[14.5rem] z-50 relative"
@@ -20,8 +15,7 @@ const LeftPart: React.FC = () => {
       onMouseDown={() => setShowPrev(true)}
       onMouseUp={() => setShowPrev(false)}
       onMouseLeave={() => setShowPrev(false)}
-      onTouchStart={() => setShowPrev(true)}
-      onTouchEnd={() => setShowPrev(false)}
+      onTouchStart={() => setShowPrev(!showPrev)}
     >
       <p className="text-center text-neutral-600 text-xs">Hold to preview</p>
       <LayoutGroup>

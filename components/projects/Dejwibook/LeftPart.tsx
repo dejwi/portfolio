@@ -15,9 +15,7 @@ const LeftPart: React.FC = () => {
       onMouseDown={() => setShowPrev(true)}
       onMouseUp={() => setShowPrev(false)}
       onMouseLeave={() => setShowPrev(false)}
-      onTouchStart={() => setShowPrev(true)}
-      onTouchEnd={() => setShowPrev(false)}
-      onTouchCancel={() => setShowPrev(false)}
+      onTouchStart={() => setShowPrev(!showPrev)}
     >
       <p className="text-center text-neutral-600 text-xs">Hold to preview</p>
       <LayoutGroup>
