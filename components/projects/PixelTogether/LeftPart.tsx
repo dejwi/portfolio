@@ -10,7 +10,7 @@ const LeftPart: React.FC = () => {
 
   return (
     <motion.div
-      className="w-[8.5rem] md:w-[14.5rem] shadow-md z-50"
+      className="w-[8.5rem] md:w-[14.5rem] z-50 relative"
       {...leftAnime}
       onMouseDown={() => setShowPrev(true)}
       onMouseUp={() => setShowPrev(false)}
@@ -18,6 +18,7 @@ const LeftPart: React.FC = () => {
       onTouchStart={() => setShowPrev(true)}
       onTouchEnd={() => setShowPrev(false)}
     >
+      <p className="text-center text-neutral-600 text-xs">Hold to preview</p>
       <LayoutGroup>
         {showPrev ? (
           <motion.div
@@ -35,7 +36,7 @@ const LeftPart: React.FC = () => {
             />
           </motion.div>
         ) : (
-          <motion.div layoutId="pixel">
+          <motion.div layoutId="pixel" className="shadow-md">
             <Image
               src={appScreenshot}
               alt="app screenshot"

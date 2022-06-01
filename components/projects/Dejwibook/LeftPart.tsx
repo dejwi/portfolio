@@ -19,6 +19,7 @@ const LeftPart: React.FC = () => {
       onTouchEnd={() => setShowPrev(false)}
       onTouchCancel={() => setShowPrev(false)}
     >
+      <p className="text-center text-neutral-600 text-xs">Hold to preview</p>
       <LayoutGroup>
         {showPrev ? (
           <motion.div
