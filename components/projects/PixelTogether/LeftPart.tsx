@@ -5,21 +5,16 @@ import Image from "next/image";
 import preview from "../../../public/pixt.gif";
 import appScreenshot from "../../../assets/pixelt.png";
 
-const LeftPart: React.FC<{ isBig: boolean }> = ({ isBig }) => {
+const LeftPart: React.FC = () => {
   const [showPrev, setShowPrev] = useState(false);
 
   return (
     <motion.div
-      className="w-[8.5rem] md:w-[14.5rem] z-50 relative"
+      className="w-[8.5rem] md:w-[14.5rem] z-50 relative cursor-pointer"
       {...leftAnime}
-      onMouseDown={() => setShowPrev(true)}
-      onMouseUp={() => setShowPrev(false)}
-      onMouseLeave={() => setShowPrev(false)}
-      onTouchStart={() => setShowPrev(!showPrev)}
+      onClick={() => setShowPrev(!showPrev)}
     >
-      <p className="text-center text-neutral-600 text-xs">
-        {isBig ? "Hold to preview" : "Tap to preview"}
-      </p>
+      <p className="text-center text-neutral-600 text-xs">Tap to preview</p>
       <LayoutGroup>
         {showPrev ? (
           <motion.div
