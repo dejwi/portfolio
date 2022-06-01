@@ -5,7 +5,7 @@ import emailLogo from "../../assets/email.svg";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Buttons: React.FC = () => {
-  const [showMail, setShowMail] = useState(true);
+  const [showMail, setShowMail] = useState(false);
 
   const copyMail = () => {
     navigator.clipboard.writeText("dawidkrasowski05@gmail.com").then();
