@@ -6,7 +6,7 @@ import { animeOpts } from "./AnimeOpts";
 const About: React.FC = () => {
   return (
     <motion.article
-      className="flex flex-col h-[90vh] w-screen items-center justify-center font-[Rubik] font-light"
+      className="flex flex-col h-[95vh] w-screen items-center justify-center font-[Rubik] font-light"
       {...animeOpts}
     >
       {/*content*/}
