@@ -27,7 +27,7 @@ const Top: React.FC = () => {
         Dawid Krasowski
       </h1>
       <h2 className="font-poppi text-sm md:text-lg tracking-[0.11em] -mt-4 md:-mt-[1.65rem]">
-        Aspiring young Full-Stack Developer
+        Ambitious young Full-Stack Developer
       </h2>
     </motion.div>
   );
