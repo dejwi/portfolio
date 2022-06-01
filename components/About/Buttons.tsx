@@ -10,6 +10,7 @@ const Buttons: React.FC = () => {
         className="w-6 h-6 m-0"
         href="https://github.com/dejwi"
         target="_blank"
+        rel="noreferrer"
       >
         <Image
           alt="github"

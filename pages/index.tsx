@@ -32,7 +32,11 @@ const Home: NextPage = () => {
       <PixelTogether />
       <Portfolio />
       <p className="text-center text-[#404040] font-poppi text-[0.7rem] underline">
-        <a href="https://github.com/dejwi?tab=repositories" target="_blank">
+        <a
+          href="https://github.com/dejwi?tab=repositories"
+          target="_blank"
+          rel="noreferrer"
+        >
           older projects
         </a>
       </p>
