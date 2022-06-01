@@ -19,7 +19,7 @@ const PixelTogether: React.FC = () => {
       {/*container*/}
       <div className="grid grid-cols-art gap-3.5">
         {/*img*/}
-        <LeftPart />
+        <LeftPart isBig={isBig} />
 
         {/*content*/}
         <motion.div

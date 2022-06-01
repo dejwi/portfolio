@@ -19,7 +19,7 @@ const Dejwibook: React.FC = () => {
       {/*container*/}
       <div className="grid grid-cols-art gap-5 md:gap-3 items-center justify-center">
         {/*img*/}
-        <LeftPart />
+        <LeftPart isBig={isBig} />
 
         {/*content*/}
         <motion.div

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Tech: React.FC<{ isBig: boolean }> = ({ isBig }) => {
   const variants = {
     move: {
-      x: isBig ? -95 : 95,
+      x: isBig ? -95 : 50,
       y: 55,
       opacity: 0,
       scale: 0.3,
@@ -19,7 +19,7 @@ const Tech: React.FC<{ isBig: boolean }> = ({ isBig }) => {
 
   return (
     <motion.div
-      className="absolute shadow p-1 flex flex-col ml-[23rem] mt-[2rem] "
+      className="absolute shadow p-1 flex flex-col bg-neutral-100 right-[10.5rem] md:left-[10.5rem] ml-[23rem] mt-[2rem] "
       variants={variants}
       initial={"move"}
       animate={"def"}

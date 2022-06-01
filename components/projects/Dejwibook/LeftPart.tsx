@@ -5,7 +5,7 @@ import Image from "next/image";
 import preview from "../../../public/dejf2.gif";
 import appScreenshot from "../../../assets/dejwibook.jpg";
 
-const LeftPart: React.FC = () => {
+const LeftPart: React.FC<{ isBig: boolean }> = ({ isBig }) => {
   const [showPrev, setShowPrev] = useState(false);
 
   return (
@@ -17,7 +17,9 @@ const LeftPart: React.FC = () => {
       onMouseLeave={() => setShowPrev(false)}
       onTouchStart={() => setShowPrev(!showPrev)}
     >
-      <p className="text-center text-neutral-600 text-xs">Hold to preview</p>
+      <p className="text-center text-neutral-600 text-xs">
+        {isBig ? "Hold to preview" : "Tap to preview"}
+      </p>
       <LayoutGroup>
         {showPrev ? (
           <motion.div
