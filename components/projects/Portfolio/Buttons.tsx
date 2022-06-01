@@ -9,6 +9,7 @@ const Buttons: React.FC<{ TechClick: () => void }> = ({ TechClick }) => {
         className="flex items-center"
         href="https://github.com/dejwi/portfolio"
         target="_blank"
+        rel="noreferrer"
       >
         <div className="w-4 h-4 m-0">
           <Image
