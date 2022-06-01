@@ -2,31 +2,60 @@ import React, { useState } from "react";
 import Image from "next/image";
 import appScreenshot from "../../assets/pixelt.png";
 import ghLogo from "../../assets/github.svg";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 import { leftAnime, rightAnime } from "./animeOpts";
+import preview from "../../assets/pixt.gif";
 
 const PixelTogether: React.FC = () => {
   const [showTech, setShowTech] = useState(false);
+  const [showPrev, setShowPrev] = useState(false);
+
   return (
     <article className="flex h-screen w-screen items-center justify-center font-[Rubik] font-light">
       {/*img*/}
       <div className="grid grid-cols-art gap-3.5">
         <motion.div
-          className="w-[8.5rem] md:w-[14.5rem] shadow-md"
+          className="w-[8.5rem] md:w-[14.5rem] shadow-md z-50"
           {...leftAnime}
+          onMouseDown={() => setShowPrev(true)}
+          onMouseUp={() => setShowPrev(false)}
+          onMouseLeave={() => setShowPrev(false)}
+          onTouchStart={() => setShowPrev(true)}
+          onTouchEnd={() => setShowPrev(false)}
         >
-          <Image
-            src={appScreenshot}
-            alt="app screenshot"
-            layout="responsive"
-            objectFit="cover"
-            className="rounded"
-          />
+          <LayoutGroup>
+            {showPrev ? (
+              <motion.div
+                className="shadow-lg"
+                animate={{ scale: 1.25 }}
+                transition={{ duration: 0.3 }}
+                layoutId="pixel"
+              >
+                <Image
+                  src={preview}
+                  alt="app screenshot"
+                  layout="responsive"
+                  objectFit="cover"
+                  className="rounded"
+                />
+              </motion.div>
+            ) : (
+              <motion.div layoutId="pixel">
+                <Image
+                  src={appScreenshot}
+                  alt="app screenshot"
+                  layout="responsive"
+                  objectFit="cover"
+                  className="rounded shadow-md"
+                />
+              </motion.div>
+            )}
+          </LayoutGroup>
         </motion.div>
 
         {/*content*/}
         <motion.div
-          className="flex flex-col justify-center h-full relative"
+          className="flex flex-col justify-center h-full relative z-40"
           {...rightAnime}
         >
           {/*header*/}
