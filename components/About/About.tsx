@@ -1,8 +1,6 @@
 import React from "react";
-import Image from "next/image";
-import ghLogo from "../assets/github.svg";
-import emailLogo from "../assets/email.svg";
 import { motion } from "framer-motion";
+import Buttons from "./Buttons";
 
 const About: React.FC = () => {
   const animeOpts = {
@@ -42,7 +40,6 @@ const About: React.FC = () => {
           to try out something new, with every project gained some unique
           knowledge, and looking to expand it even more.
         </p>
-        {/*buttons*/}
 
         <h3 className="mt-8">
           <strong>Current</strong> Tech
@@ -52,28 +49,8 @@ const About: React.FC = () => {
           Socket.io and diving into Next.js
         </p>
 
-        <div className="flex justify-center gap-12 text-xs font-light mt-2">
-          <a
-            className="w-6 h-6 m-0"
-            href="https://github.com/dejwi"
-            target="_blank"
-          >
-            <Image
-              alt="github"
-              src={ghLogo}
-              layout="responsive"
-              objectFit="cover"
-            />
-          </a>
-          <a className="w-6 h-6 m-0">
-            <Image
-              alt="github"
-              src={emailLogo}
-              layout="responsive"
-              objectFit="cover"
-            />
-          </a>
-        </div>
+        {/*buttons*/}
+        <Buttons />
       </div>
     </motion.article>
   );

@@ -2,10 +2,10 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import Top from "../components/Top";
-import Dejwibook from "../components/projects/Dejwibook";
-import PixelTogether from "../components/projects/PixelTogether";
-import Portfolio from "../components/projects/Portfolio";
-import About from "../components/About";
+import Dejwibook from "../components/projects/Dejwibook/Dejwibook";
+import PixelTogether from "../components/projects/PixelTogether/PixelTogether";
+import Portfolio from "../components/projects/Portfolio/Portfolio";
+import About from "../components/About/About";
 
 const Home: NextPage = () => {
   return (
