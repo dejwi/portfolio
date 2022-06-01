@@ -19,7 +19,12 @@ const Buttons: React.FC = () => {
           objectFit="cover"
         />
       </a>
-      <a className="w-6 h-6 m-0">
+      <a
+        className="w-6 h-6 m-0"
+        href="mailto:dawidkrasowski05@gmail.com"
+        target="_blank"
+        rel="noreferrer"
+      >
         <Image
           alt="github"
           src={emailLogo}
