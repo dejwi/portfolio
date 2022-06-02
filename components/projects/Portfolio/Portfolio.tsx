@@ -34,11 +34,11 @@ const Portfolio: React.FC = () => {
 
   return (
     <motion.article
-      className="flex flex-col h-[90vh] w-screen items-center justify-center font-[Rubik] font-light relative"
+      className="flex flex-col h-[90vh] w-screen items-center justify-center font-[Rubik] font-light "
       {...animeOpts}
     >
       {/*content*/}
-      <div className="flex flex-col">
+      <div className="flex flex-col relative">
         {/*header*/}
         <div className="flex flex-col justify-center items-center">
           <h3 className="tracking-[-0.035em] text-[2.5rem]">Portfolio</h3>
@@ -55,8 +55,8 @@ const Portfolio: React.FC = () => {
 
         {/*buttons*/}
         <Buttons TechClick={() => setShowTech(!showTech)} />
+        <AnimatePresence>{showTech && <Tech isBig={isBig} />}</AnimatePresence>
       </div>
-      <AnimatePresence>{showTech && <Tech isBig={isBig} />}</AnimatePresence>
     </motion.article>
   );
 };

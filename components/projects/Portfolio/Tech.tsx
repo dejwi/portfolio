@@ -19,7 +19,7 @@ const Tech: React.FC<{ isBig: boolean }> = ({ isBig }) => {
 
   return (
     <motion.div
-      className="absolute shadow p-1 flex flex-col bg-neutral-100 right-[10.5rem] md:left-[10.5rem] ml-[23rem] mt-[2rem] "
+      className="absolute shadow p-1 flex flex-col bg-neutral-100 right-[5.5rem] md:-right-[5.6rem] ml-[23rem] mt-[2rem] "
       variants={variants}
       initial={"move"}
       animate={"def"}
